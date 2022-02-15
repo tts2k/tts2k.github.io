@@ -1,5 +1,6 @@
 import React from "react";
 import { colors } from "../constants";
+import { Clock } from "./Clock";
 
 export const StatusBar = () => {
     return (
@@ -11,7 +12,9 @@ export const StatusBar = () => {
             </div>
             <div style={ styles.center }>
             </div>
-            <div style={ styles.right }></div>
+            <div style={ styles.right }>
+                <Clock/>
+            </div>
         </div>
     )
 }

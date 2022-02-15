@@ -11,7 +11,6 @@ export const Window = () => {
     const [border, setBorder] = useState(borderColor.inactive);
     const commands = {
         whoami: "tts2k",
-        cd: (directory) => `changed path to ${directory}`,
     };
 
     const onTerminalFocusChange = () => {
