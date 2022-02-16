@@ -5,6 +5,7 @@ export const colors = {
     primary: "#458588",
     red: "#cc241d",
     green: "#98971a",
+    aqua: "#689d6a"
 }
 
 export const motd =`

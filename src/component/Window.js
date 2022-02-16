@@ -2,15 +2,17 @@ import React, { useState }from 'react';
 import { Rnd } from 'react-rnd'
 import { colors, motd } from "../constants";
 import { ReactTerminal } from '@tts2k/react-terminal'
+import { Profile } from './Profile';
 
 export const Window = () => {
     const borderColor = {
         active: `2px solid ${ colors.primary }`,
         inactive: `2px solid ${ colors.background2 }`
     }
+
     const [border, setBorder] = useState(borderColor.inactive);
     const commands = {
-        whoami: "tts2k",
+        profile: () => ( <Profile/> )
     };
 
     const onTerminalFocusChange = () => {
