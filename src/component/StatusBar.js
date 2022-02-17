@@ -1,19 +1,20 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { colors } from "../constants";
 import { Clock } from "./Clock";
 import { WorkspaceContext } from "../context/WorkspaceContext";
 
 export const StatusBar = () => {
     const context = useContext(WorkspaceContext)
-    const [ws1Style, setWs1Style] = useState(styles.workspace);
-    const [ws2Style, setWs2Style] = useState(styles.workspaceInactive);
+    let ws1Style = styles.workspace;
+    let ws2Style = styles.workspaceInactive;
 
+    console.log("rendered");
     if (context.store === 1) {
-        setWs1Style(styles.workspace);
-        setWs2Style(styles.workspaceInactive);
+        ws1Style = styles.workspace;
+        ws2Style = styles.workspaceInactive;
     } else {
-        setWs1Style(styles.workspaceInactive);
-        setWs2Style(styles.workspace);
+        ws1Style = styles.workspaceInactive;
+        ws2Style = styles.workspace;
     }
 
 
