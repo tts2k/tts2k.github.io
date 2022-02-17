@@ -27,7 +27,7 @@ export const Profile = () => {
                     <span style={styles.attrName}> Education:</span>
                     Graduated from Fanshawe College
                 </div>
-                <div>---------------------</div>
+                <div>-----------</div>
                 <div>
                     <span style={styles.attrName}> Github:</span>
                     <a 

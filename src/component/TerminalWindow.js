@@ -4,7 +4,7 @@ import { colors, motd } from "../constants";
 import { ReactTerminal } from '@tts2k/react-terminal'
 import { Profile } from './Profile';
 
-export const Window = () => {
+export const TerminalWindow = () => {
     const borderColor = {
         active: `2px solid ${ colors.primary }`,
         inactive: `2px solid ${ colors.background2 }`

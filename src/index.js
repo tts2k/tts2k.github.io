@@ -8,9 +8,9 @@ import './fonts/siji.ttf'
 import { TerminalContextProvider } from '@tts2k/react-terminal/'
 
 ReactDOM.render(
-  <TerminalContextProvider>
-    <App />
-  </TerminalContextProvider>,
+    <TerminalContextProvider>
+      <App />
+    </TerminalContextProvider>,
   document.getElementById('root')
 );
 

@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { colors } from "../constants";
 import { Clock } from "./Clock";
+import { WorkspaceContext } from "../context/WorkspaceContext";
 
 export const StatusBar = () => {
+    const context = useContext(WorkspaceContext)
+    const [ws1Style, setWs1Style] = useState(styles.workspace);
+    const [ws2Style, setWs2Style] = useState(styles.workspaceInactive);
+
+    if (context.store === 1) {
+        setWs1Style(styles.workspace);
+        setWs2Style(styles.workspaceInactive);
+    } else {
+        setWs1Style(styles.workspaceInactive);
+        setWs2Style(styles.workspace);
+    }
+
+
+    const changeWorkspace = (e) => {
+        context.setStore(parseInt(e.target.innerText));
+    }
+
     return (
         <div style={ styles.bar }>
             <div style={ styles.left }>
-                <div style={ styles.workspace }> 1 </div>
-                <div style={{ ...styles.workspace, ...styles.workspaceInactive }}> 2 </div>
+                <div
+                    style={ ws1Style }
+                    onClick={ changeWorkspace }
+                >
+                    1
+                </div>
+                <div
+                    style={ ws2Style }
+                    onClick={ changeWorkspace }
+                >
+                    2
+                </div>
                 <div style={ styles.windowName }> tts2k@tts2k.github.io: ~</div>
             </div>
             <div style={ styles.center }>
@@ -55,6 +83,9 @@ const styles = {
         borderBottom: `3px solid ${ colors.primary }`
     },
     workspaceInactive: {
+        paddingLeft: 10,
+        paddingTop: 1,
+        paddingRight: 10,
         borderBottom: `3px solid ${ colors.background }`
     },
     windowName: {
