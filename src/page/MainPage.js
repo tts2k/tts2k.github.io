@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { StatusBar } from '../component/StatusBar'
 import { TerminalWindow } from '../component/TerminalWindow'
 import { WorkspaceContext } from '../context/WorkspaceContext'
+import './MainPage.css'
 
 export const MainPage = () => {
     const context = useContext(WorkspaceContext);
@@ -12,7 +13,7 @@ export const MainPage = () => {
     return (
         <>
             <StatusBar/>
-            <div style={{ visibility:wsVisibility.ws1 }}>
+            <div className="container" style={{ visibility:wsVisibility.ws1 }}>
                 <TerminalWindow/>
             </div>
         </>
