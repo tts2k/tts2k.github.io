@@ -8,8 +8,7 @@ export const StatusBar = () => {
     let ws1Style = styles.workspace;
     let ws2Style = styles.workspaceInactive;
 
-    console.log("rendered");
-    if (context.store === 1) {
+    if (context.currWorkspace === 1) {
         ws1Style = styles.workspace;
         ws2Style = styles.workspaceInactive;
     } else {
@@ -19,7 +18,15 @@ export const StatusBar = () => {
 
 
     const changeWorkspace = (e) => {
-        context.setStore(parseInt(e.target.innerText));
+        let ws = parseInt(e.target.innerText)
+        context.setCurrWorkspace(parseInt(ws));
+        // Change window name to HTML Viewer if switching to second workspace
+        if (ws === 2) {
+            context.setCurrWindow("HTML Viewer");
+        }
+        else {
+            context.setCurrWindow("");
+        }
     }
 
     return (
@@ -37,7 +44,7 @@ export const StatusBar = () => {
                 >
                     2
                 </div>
-                <div style={ styles.windowName }> tts2k@tts2k.github.io: ~</div>
+                <div style={ styles.windowName }> { context.currWindow } </div>
             </div>
             <div style={ styles.center }>
             </div>

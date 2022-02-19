@@ -3,11 +3,12 @@ import React, { useState, createContext } from "react";
 export const WorkspaceContext = createContext();
 
 export const WorkspaceContextProvider = (props) => {
-    const [store, setStore] = useState(1)
+    const [currWorkspace, setCurrWorkspace] = useState(1)
+    const [currWindow, setCurrWindow] = useState("")
 
     return (
         <WorkspaceContext.Provider
-            value={{ store, setStore }}
+            value={{ currWorkspace, setCurrWorkspace, currWindow, setCurrWindow }}
         >
             { props.children }
         </WorkspaceContext.Provider>

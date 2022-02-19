@@ -1,10 +1,12 @@
-import React, { useState }from 'react';
+import React, { useContext, useState }from 'react';
 import { Rnd } from 'react-rnd'
 import { colors, motd } from "../constants";
 import { ReactTerminal } from '@tts2k/react-terminal'
 import { Profile } from './Profile';
+import { WorkspaceContext } from '../context/WorkspaceContext';
 
 export const TerminalWindow = () => {
+    const wsContext = useContext(WorkspaceContext);
     const borderColor = {
         active: `2px solid ${ colors.primary }`,
         inactive: `2px solid ${ colors.background2 }`
@@ -16,9 +18,13 @@ export const TerminalWindow = () => {
     };
 
     const onTerminalFocusChange = () => {
-        (border === borderColor.inactive)
-            ? setBorder(borderColor.active)
-            : setBorder(borderColor.inactive)
+        if (border === borderColor.inactive) {
+            setBorder(borderColor.active)
+            wsContext.setCurrWindow("tts2k@tts2k.github.io: ~")
+        } else {
+            setBorder(borderColor.inactive)
+            wsContext.setCurrWindow("")
+        }
     }
 
     return (
