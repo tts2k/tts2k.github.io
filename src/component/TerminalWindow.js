@@ -4,6 +4,7 @@ import { colors, motd } from "../constants";
 import { ReactTerminal } from '@tts2k/react-terminal'
 import { Profile } from './Profile';
 import { WorkspaceContext } from '../context/WorkspaceContext';
+import {SiteInfo} from './SiteInfo';
 
 export const TerminalWindow = () => {
     const wsContext = useContext(WorkspaceContext);
@@ -15,7 +16,8 @@ export const TerminalWindow = () => {
     const [border, setBorder] = useState(borderColor.inactive);
     const commands = {
         profile: () => ( <Profile/> ),
-        ls: "projects.html"
+        ls: "projects.html",
+        info: () => ( <SiteInfo/> )
     };
 
     const onTerminalFocusChange = () => {
