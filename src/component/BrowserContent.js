@@ -37,7 +37,7 @@ export const BrowserContent = () => {
                 >
                     <h1> City Comic </h1>
                 </a>
-                <p> A simplke web app to read xkcd comics </p>
+                <p> A simple web app to read xkcd comics </p>
             </div>
         </div>
     )
