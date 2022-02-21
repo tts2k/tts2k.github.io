@@ -14,7 +14,8 @@ export const TerminalWindow = () => {
 
     const [border, setBorder] = useState(borderColor.inactive);
     const commands = {
-        profile: () => ( <Profile/> )
+        profile: () => ( <Profile/> ),
+        ls: "projects.html"
     };
 
     const onTerminalFocusChange = () => {

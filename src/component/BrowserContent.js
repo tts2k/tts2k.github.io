@@ -5,8 +5,10 @@ import tw3 from '../assets/images/2w3.png'
 import tw4 from '../assets/images/2w4.png'
 import cityComic from '../assets/images/citycomic.png'
 import { colors } from '../constants';
+import './BrowserContent.css';
 
 export const BrowserContent = () => {
+
     return (
         <div style={ styles.container }>
             <div style={ styles.project }>
@@ -14,13 +16,27 @@ export const BrowserContent = () => {
                 <img style={ styles.appImage } src={ tw2 } alt="2w screenshot 2"/>
                 <img style={ styles.appImage } src={ tw3 } alt="2w screenshot 3"/>
                 <img style={ styles.appImage } src={ tw4 } alt="2w screenshot 4"/>
-                <h1> 2-Wacht </h1>
+                <a
+                    href="https://github.com/tts2k/2-Wacht"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={ styles.link }
+                >
+                    <h1> 2-Wacht </h1>
+                </a>
                 <p> An app to help manage movie backlog</p>
             </div>
 
             <div style={ styles.project }>
                 <img style={ styles.img } src={ cityComic } alt="2w screenshot 4"/>
-                <h1> City Comic </h1>
+
+                <a 
+                    href="https://github.com/tts2k/city-comic"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <h1> City Comic </h1>
+                </a>
                 <p> A simplke web app to read xkcd comics </p>
             </div>
         </div>
@@ -54,5 +70,8 @@ const styles = {
     },
     img: {
         width: "80%"
+    },
+    link: {
+
     }
 }
