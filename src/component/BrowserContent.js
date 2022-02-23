@@ -46,18 +46,19 @@ export const BrowserContent = () => {
 const styles = {
     container: {
         width: "100%",
-        height: "100%",
-        overflow: "scroll",
+        height: "inherit",
+        overflowY: "scroll",
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
-        paddingTop: 30
+        paddingTop: 30,
+        height: '100%'
     },
     project: {
         backgroundColor: colors.background2,
         marginBottom: 30,
         padding: 5,
-        width: "80%"
+        width: "80%",
     },
     appImage: {
         width: "15%",

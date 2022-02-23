@@ -22,8 +22,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   min-width: 900px;
-  max-width: 2304px;
-  max-height: 1536px;
 }
 
 body, html {

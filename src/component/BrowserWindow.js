@@ -6,41 +6,34 @@ import { BrowserContent } from "./BrowserContent"
 
 export const BrowserWindow = () => {
     return (
-        <div style={ styles.wrapper }>
-            <div style={ styles.container }>
-                <div style={ styles.toolbar }>
-                    <div style={ styles.navBtns }>
-                        <MdArrowBackIos/>
-                        <MdArrowForwardIos/>
-                    </div>
-                    <div style={ styles.addrBar }>
-                        <span>~/projects.html</span>
-                    </div>
-                    <div style={ styles.menu }>
-                        <BsThreeDots/>
-                    </div>
+        <div style={ styles.container }>
+            <div style={ styles.toolbar }>
+                <div style={ styles.navBtns }>
+                    <MdArrowBackIos/>
+                    <MdArrowForwardIos/>
                 </div>
-                <BrowserContent/>
+                <div style={ styles.addrBar }>
+                    <span>~/projects.html</span>
+                </div>
+                <div style={ styles.menu }>
+                    <BsThreeDots/>
+                </div>
             </div>
+            <BrowserContent/> 
         </div>
     )
 }
 
 const styles = {
-    wrapper: {
-        height: "100%",
-        width: "100%",
-    },
     container: {
-        position: "absolute",
-        left: "50%",
-        top: "50%",
-        transform: "translate(-50%, -50%)",
-        width: "98%",
-        height: "95%",
+        height: "96%",
         backgroundColor: colors.background,
         color: colors.forground,
         fontFamily: "Roboto",
+        display: 'flex',
+        flexDirection: 'column',
+        margin: "1%",
+        marginBottom: "10%"
     },
     toolbar: {
         paddingTop: 20,
