@@ -1,10 +1,10 @@
 import React from 'react';
-import tw1 from '../assets/images/2w1.png'
-import tw2 from '../assets/images/2w2.png'
-import tw3 from '../assets/images/2w3.png'
-import tw4 from '../assets/images/2w4.png'
-import cityComic from '../assets/images/citycomic.png'
-import { colors } from '../constants';
+import tw1 from '../../assets/images/2w1.png'
+import tw2 from '../../assets/images/2w2.png'
+import tw3 from '../../assets/images/2w3.png'
+import tw4 from '../../assets/images/2w4.png'
+import cityComic from '../../assets/images/citycomic.png'
+import { colors } from '../../constants';
 import './BrowserContent.css';
 
 export const BrowserContent = () => {

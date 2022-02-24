@@ -1,5 +1,5 @@
 import React from "react";
-import { colors, motd } from "../constants";
+import { colors, motd } from "../../../constants";
 
 export const Motd = () => {
     return (
@@ -12,7 +12,10 @@ export const Motd = () => {
                 <span style={ styles.highlighted }> profile </span>
                 to see my profile, or
                 <span style={ styles.highlighted }> help </span>
-                to see list of commands
+                for a list of commands.
+            </div>
+            <div>
+                Click on the numbers on top left corner to change workspace.
             </div>
             <br/>
         </>

@@ -1,5 +1,5 @@
 import React from "react";
-import { colors } from "../constants";
+import { colors } from "../../constants";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md"
 import { BsThreeDots } from "react-icons/bs"
 import { BrowserContent } from "./BrowserContent"

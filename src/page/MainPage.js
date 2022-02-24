@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { StatusBar } from '../component/StatusBar'
-import { TerminalWindow } from '../component/TerminalWindow'
-import { BrowserWindow } from '../component/BrowserWindow'
+import { StatusBar } from '../component/StatusBar/StatusBar'
+import { TerminalWindow } from '../component/Terminal/TerminalWindow'
+import { BrowserWindow } from '../component/Browser/BrowserWindow'
 import { WorkspaceContext } from '../context/WorkspaceContext'
 import './MainPage.css'
 

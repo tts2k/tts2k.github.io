@@ -1,12 +1,10 @@
 import React, { useContext, useState }from 'react';
 import { Rnd } from 'react-rnd'
-import { colors } from "../constants";
+import { colors } from "../../constants";
 import { ReactTerminal } from '@tts2k/react-terminal'
-import { Profile } from './Profile';
-import { WorkspaceContext } from '../context/WorkspaceContext';
-import { SiteInfo } from './SiteInfo';
-import { Help } from './Help';
-import { Motd } from './Motd';
+import { Profile, SiteInfo, Help } from './Commands';
+import { WorkspaceContext } from '../../context/WorkspaceContext';
+import { Motd } from './Motd/Motd';
 
 export const TerminalWindow = () => {
     const wsContext = useContext(WorkspaceContext);

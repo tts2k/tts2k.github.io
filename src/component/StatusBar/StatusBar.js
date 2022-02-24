@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { colors } from "../constants";
-import { Clock } from "./Clock";
-import { WorkspaceContext } from "../context/WorkspaceContext";
+import { colors } from "../../constants";
+import { Clock } from "./Clock/Clock";
+import { WorkspaceContext } from "../../context/WorkspaceContext";
 
 export const StatusBar = () => {
     const context = useContext(WorkspaceContext)
