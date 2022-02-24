@@ -1,0 +1,13 @@
+dl {
+    display: grid;
+    grid-template-columns: max-content auto;
+    margin: 0;
+}
+
+dt {
+    grid-column-start: 1;
+}
+
+dd {
+    grid-column-start: 2;
+}

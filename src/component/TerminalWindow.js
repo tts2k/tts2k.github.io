@@ -5,6 +5,7 @@ import { ReactTerminal } from '@tts2k/react-terminal'
 import { Profile } from './Profile';
 import { WorkspaceContext } from '../context/WorkspaceContext';
 import { SiteInfo } from './SiteInfo';
+import { Help } from './Help';
 
 export const TerminalWindow = () => {
     const wsContext = useContext(WorkspaceContext);
@@ -18,8 +19,10 @@ export const TerminalWindow = () => {
         profile: () => ( <Profile/> ),
         ls: "projects.html",
         info: () => ( <SiteInfo/> ),
+        help: () => ( <Help/> )
     }
 
+    // Change border color when focus change
     const onTerminalFocusChange = () => {
         if (border === borderColor.inactive) {
             setBorder(borderColor.active)
@@ -68,6 +71,7 @@ const styles = {
     }
 }
 
+// Terminal color scheme
 const gruvbox = {
     background: colors.background,
     color: colors.forground,
