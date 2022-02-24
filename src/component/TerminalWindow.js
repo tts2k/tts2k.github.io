@@ -1,11 +1,12 @@
 import React, { useContext, useState }from 'react';
 import { Rnd } from 'react-rnd'
-import { colors, motd } from "../constants";
+import { colors } from "../constants";
 import { ReactTerminal } from '@tts2k/react-terminal'
 import { Profile } from './Profile';
 import { WorkspaceContext } from '../context/WorkspaceContext';
 import { SiteInfo } from './SiteInfo';
 import { Help } from './Help';
+import { Motd } from './Motd';
 
 export const TerminalWindow = () => {
     const wsContext = useContext(WorkspaceContext);
@@ -46,7 +47,7 @@ export const TerminalWindow = () => {
                 style={{ ...styles.window, border: border }}
             >
                 <ReactTerminal 
-                    welcomeMessage={(<pre style={{fontFamily: "TerminusTTF" }}>{ motd }</pre>)}
+                    welcomeMessage={( <Motd/> )}
                     commands={ commands }
                     themes={{ gruvbox }}
                     theme="gruvbox"

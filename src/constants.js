@@ -16,10 +16,3 @@ __      __   _                    _                        _ _
                                                  |__/                
 
 `
-
-export const help = `
-help           print this message\n
-profile        print my profile
-info           print this site info (colorscheme, wallpaper source, source code)
-ls
-`
