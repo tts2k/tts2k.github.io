@@ -32,8 +32,8 @@ const styles = {
         fontFamily: "Roboto",
         display: 'flex',
         flexDirection: 'column',
-        margin: "1%",
-        marginBottom: "10%"
+        margin: "0.5%",
+        marginBottom: "5%"
     },
     toolbar: {
         paddingTop: 20,

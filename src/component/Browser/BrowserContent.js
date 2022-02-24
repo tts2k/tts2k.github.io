@@ -34,6 +34,7 @@ export const BrowserContent = () => {
                     href="https://github.com/tts2k/city-comic"
                     target="_blank"
                     rel="noreferrer"
+                    style={ styles.link }
                 >
                     <h1> City Comic </h1>
                 </a>
@@ -73,6 +74,6 @@ const styles = {
         width: "80%"
     },
     link: {
-
+        color: colors.forground
     }
 }
